@@ -5,10 +5,8 @@ const fs = require ('fs');
 const util = require ('util');
 
 //modules
+const api = require('./utils/axios');
 const generateMarkdown = require ('./utils/generateMarkdown');
-
-
-
 
 // array of questions for user
 const questions = [
@@ -41,31 +39,31 @@ const questions = [
         message: "Describe the steps required to install your application.",
         name: 'installation'
     },
-    {
-        type: 'input',
-        message: "Describe how a user would use your application and provide examples.",
-        name: 'usage'
-    },
-    {
-        type: 'input',
-        message: "If applicable, describe what third party assets were used, and give credit to any contributors.",
-        name: 'credits'
-    },
-    {
-        type: 'input',
-        message: "If applicable, describe how other programmers can contribute to your application.",
-        name: 'contributing'
-    },
-    {
-        type: 'input',
-        message: "If applicable, describe how other programmers can contribute to your application.",
-        name: 'contributing'
-    },
-    {
-        type: 'input',
-        message: "final message for the user to enjoy the app",
-        name: 'Enjoy'
-    },
+    // {
+    //     type: 'input',
+    //     message: "Describe how a user would use your application and provide examples.",
+    //     name: 'usage'
+    // },
+    // {
+    //     type: 'input',
+    //     message: "If applicable, describe what third party assets were used, and give credit to any contributors.",
+    //     name: 'credits'
+    // },
+    // {
+    //     type: 'input',
+    //     message: "If applicable, describe how other programmers can contribute to your application.",
+    //     name: 'contributing'
+    // },
+    // {
+    //     type: 'input',
+    //     message: "If applicable, describe how other programmers can contribute to your application.",
+    //     name: 'contributing'
+    // },
+    // {
+    //     type: 'input',
+    //     message: "final message for the user to enjoy the app",
+    //     name: 'Enjoy'
+    // },
 
 
 ];
