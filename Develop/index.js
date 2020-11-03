@@ -5,7 +5,6 @@ const fs = require ('fs');
 const util = require ('util');
 
 //modules
-const api = require('./utils/axios');
 const generateMarkdown = require ('./utils/generateMarkdown');
 
 // array of questions for user
@@ -34,11 +33,11 @@ const questions = [
             return true;
         }
     },
-    {
-        type: 'input',
-        message: "Describe the steps required to install your application.",
-        name: 'installation'
-    },
+    // {
+    //     type: 'input',
+    //     message: "Describe the steps required to install your application.",
+    //     name: 'installation'
+    // },
     // {
     //     type: 'input',
     //     message: "Describe how a user would use your application and provide examples.",
@@ -64,20 +63,17 @@ const questions = [
     //     message: "final message for the user to enjoy the app",
     //     name: 'Enjoy'
     // },
-
-
 ];
 
 // function to write README file
 
 function writeToFile(fileName, data) {
-    false.writeFile(fileName, data,err => {
+    fs.writeFile(fileName, data,err => {
         if (err) {
             return console.log(err);
         }
         console.log("Success! Your README.md file has been created")
     });
-
 }
 
 const writeFileAsync = util.promisify(writeToFile);
@@ -90,19 +86,10 @@ async function init(){
         // Prompt Inquirer questions
         const userResponses = await inquirer.prompt(questions);
         console.log("Your responses: ", userResponses);
-        console.log("Thank you for your responses! Fetching your GitHub data next...");
-    
-        // Call GitHub api for user info
-        const userInfo = await api.getUser(userResponses);
-        console.log("Your GitHub user info: ", userInfo);
-    
-        // Pass Inquirer userResponses and GitHub userInfo to generateMarkdown
-        console.log("Generating your README next...")
-        const markdown = generateMarkdown(userResponses, userInfo);
-        console.log(markdown);
+        console.log("Thank you for your responses! Your README is cooking");
     
         // Write markdown to file
-        await writeFileAsync('ExampleREADME.md', markdown);
+        await writeFileAsync('./sample/ExampleREADME.md', generateMarkdown);
 
     } catch (error) {
         console.log(error);
@@ -110,5 +97,5 @@ async function init(){
 
     };
 
-// function call to initialize program
+// // function call to initialize program
     init();
