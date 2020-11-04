@@ -29,7 +29,7 @@ The following have been defined for you: ${userResponses.testing}
 
 ## Note for the user
 
-${userResponses.enjoy}
+${userResponses.Enjoy}
 
 ---
 
