@@ -17,6 +17,9 @@ Run node index.js and follow the prompts. Do your best to answer the questions i
 See demo here - 
 https://drive.google.com/file/d/1X6QqtU3J9wJN4ZlDHfNouFb75YTBgyz1/view?usp=sharing
 
+See sample here -
+![goodREADME-generator](Develop/ExampleREADME.md)
+
 ## Thank you!
 
 Thanks for checking this application out! I hope that you enjoy it and now you can spend more time developing and less time worrying about your ReadMe.
