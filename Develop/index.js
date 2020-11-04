@@ -33,36 +33,36 @@ const questions = [
       return true;
     },
   },
-  // {
-  //     type: 'input',
-  //     message: "Describe the steps required to install your application.",
-  //     name: 'installation'
-  // },
-  // {
-  //     type: 'input',
-  //     message: "Describe how a user would use your application and provide examples.",
-  //     name: 'usage'
-  // },
-  // {
-  //     type: 'input',
-  //     message: "If applicable, describe what third party assets were used, and give credit to any contributors.",
-  //     name: 'credits'
-  // },
-  // {
-  //     type: 'input',
-  //     message: "If applicable, describe how other programmers can contribute to your application.",
-  //     name: 'contributing'
-  // },
-  // {
-  //     type: 'input',
-  //     message: "If applicable, describe how other programmers can contribute to your application.",
-  //     name: 'contributing'
-  // },
-  // {
-  //     type: 'input',
-  //     message: "final message for the user to enjoy the app",
-  //     name: 'Enjoy'
-  // },
+  {
+      type: 'input',
+      message: "Describe the steps required to install your application.",
+      name: 'installation'
+  },
+  {
+      type: 'input',
+      message: "Describe how a user would use your application and provide examples.",
+      name: 'usage'
+  },
+  {
+      type: 'input',
+      message: "If applicable, describe what third party assets were used, and give credit to any contributors.",
+      name: 'credits'
+  },
+  {
+      type: 'input',
+      message: "If applicable, describe how other programmers can contribute to your application.",
+      name: 'contributing'
+  },
+  {
+      type: 'input',
+      message: "If applicable, describe test cases that you have written for this application.",
+      name: 'testing'
+  },
+  {
+      type: 'input',
+      message: "final message for the user to enjoy the app",
+      name: 'Enjoy'
+  },
 ];
 
 // function to write README file
@@ -83,7 +83,7 @@ async function init() {
   const userResponses = await inquirer.prompt(questions);
   console.log("Your responses: ", userResponses);
   console.log("Thank you for your responses! Your README is cooking");
-  console.log(userResponses);
+//   console.log(userResponses);
   // Write markdown to file
   writeToFileA("ExampleREADME.md", generateMarkdown(userResponses));
 }
