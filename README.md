@@ -15,7 +15,7 @@ The goodREADME application is invoked by using node index.js
 Run node index.js and follow the prompts. Do your best to answer the questions in detail. The answers provided will be plugged into a pre-defined template
 
 See demo here - 
-[![Watch the video](goodReadme_Demo.mov)
+https://drive.google.com/file/d/1X6QqtU3J9wJN4ZlDHfNouFb75YTBgyz1/view?usp=sharing
 
 ## Thank you!
 
